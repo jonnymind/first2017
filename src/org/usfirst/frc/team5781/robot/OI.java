@@ -8,27 +8,16 @@
 package org.usfirst.frc.team5781.robot;
 
 import edu.wpi.first.wpilibj.Joystick;
-import edu.wpi.first.wpilibj.drive.RobotDrive;
-import edu.wpi.first.wpilibj.Spark;
-import edu.wpi.first.wpilibj.buttons.Button;
+
 /**
  * This class is the glue that binds the controls on the physical operator
  * interface to the commands and command groups that allow control of the robot.
- */ 
-public class OI {
-	private RobotDrive m_drive;
-	private Joystick m_joystick;
+ */ public class OI {
+	public Joystick Driver = new Joystick(0);
 	
 	
 	public OI() {
-		Spark frontLeft = new Spark(0);
-		Spark frontRight = new Spark(1);
-		Spark rearLeft = new Spark(2);
-		Spark rearRight = new Spark(3);
-		m_drive = new RobotDrive(frontLeft	, rearLeft, frontRight, rearRight);
-		m_joystick = new Joystick(1);
-		
-		}
+	}
 	
 	//// CREATING BUTTONS
 	// One type of button is a joystick button which is any button on a
@@ -57,5 +46,4 @@ public class OI {
 	// Start the command when the button is released and let it run the command
 	// until it is finished as determined by it's isFinished method.
 	// button.whenReleased(new ExampleCommand());
-	public Joystick Driver = new Joystick(0);
 }
